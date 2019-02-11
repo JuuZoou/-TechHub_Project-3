@@ -1,0 +1,40 @@
+.fl{
+    display: flex;
+    display: -webkit-box;  // OLD - iOS 6-, Safari 3.1-6, BB7 
+    display: -ms-flexbox;  // TWEENER - IE 10
+    display: -webkit-flex; // NEW - Safari 6.1+. iOS 7.1+, BB10
+    &_jus{
+        &_bet{
+            justify-content: space-between;
+        }
+        &_cen{
+            justify-content: center;
+        }
+        &_end{
+            justify-content: flex-end;
+        }
+    }
+    &_dir{
+        &_col{
+            flex-direction: column;
+        }
+    }
+    &_ali{
+        &_cen{
+            align-items: center;
+        }
+        &_sta{
+            align-items: flex-start;
+        }
+        &_end{
+            align-items: flex-end;
+        }
+    }
+    &_center{
+        align-items: center;
+        justify-content: center;
+    }
+    &_wrap{
+        flex-wrap: wrap;
+    }
+}

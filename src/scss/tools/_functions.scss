@@ -1,0 +1,8 @@
+// Colors Function
+@function color($color-name, $alpha) {
+    @if ($alpha == false){
+        @return map-get($colors ,$color-name);
+    }@else{
+        @return rgba(map-get($colors ,$color-name), $alpha);
+    }
+};
