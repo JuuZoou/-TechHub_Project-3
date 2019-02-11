@@ -1,0 +1,46 @@
+.form{
+    &__input{
+        position: relative;
+        color: color(text-grey, 1);
+        font-size: 1.6rem;
+        font-family: 'bpg_webcaps';
+        line-height: 1.9rem;
+        width: 100%;
+        padding: 0.8em 1.2em;
+        margin-bottom: 2em;
+        border: 1px solid rgba($color: #002464, $alpha: 0.08);
+        background-color: color(bg-white, 1);
+        @include border-radius(6px);
+        transition: 0.35s;
+        &:focus{
+            border: 1px solid color(bg-blue, 0.8);
+        }
+        &.wrong{
+            position: relative;
+            border: 1px solid color(bg-red, 0.6);
+        }
+        &-heading{
+            color: color(text-grey, 0.5);
+            font-size: 1.4rem;
+            font-family: 'bpg_web';
+            line-height: 1.6rem;
+        }
+    }
+    &__button{
+        cursor: pointer;
+        color: color(text-white, 1);
+        font-size: 1.6rem;
+        font-family: 'bpg_webcaps';
+        line-height: 1.9rem;
+        padding: 1em 3em;
+        border: 1px solid transparent;
+        background-color: color(text-blue, 1);
+        @include border-radius(6px);
+        transition: 0.35s;
+        &:hover{
+            color: color(text-blue, 1);
+            border: 1px solid color(bg-blue, 0.3);
+            background-color: color(bg-blue, 0.3);
+        }
+    }
+}

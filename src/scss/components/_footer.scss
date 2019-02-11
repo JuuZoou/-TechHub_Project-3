@@ -1,0 +1,28 @@
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    border-top: 1px solid color(bg-grey, 0.2);
+    background-color: #FCFCFC;
+    &__copyright{
+        color: color(text-grey, 1);
+        font-size: 1.2rem;
+        font-family: 'bpg_web';
+        line-height: 1.6rem;
+    }
+    &__list{
+        &-item{
+            cursor: pointer;
+            color: color(text-grey, 1);
+            font-size: 1.2rem;
+            font-family: 'bpg_webcaps';
+            line-height: 1.6rem;
+            margin: 0 2em 0 0;
+            transition: 0.35s;
+            &:hover{
+                color: color(text-blue, 1);
+            }
+        }
+    }
+}

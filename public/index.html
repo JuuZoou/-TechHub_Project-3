@@ -11,6 +11,47 @@
     <link rel="stylesheet" href="./assets/styles/index.css">
 </head>
 <body>
+    <header class="header fl fl_ali_cen">
+        <div class="wrapper fl fl_jus_bet">
+            <h1 class="header__logo fl fl_center">ონლაინ პროდუქტი</h1>
+            <div class="fl">
+                <a class="header__button header__button--reg" href="#">რეგისტრაცია</a>
+                <a class="header__button header__button--auth" href="#">ავტორიზაცია</a>
+            </div>
+        </div>
+    </header>
+    <footer class="footer fl fl_ali_cen">
+        <div class="wrapper fl fl_jus_bet">
+            <span class="footer__copyright">® ყველა უფლება დაცულია</span>
+            <ul class="fooer__list fl">
+                <li class="footer__list-item">მთავარი</li>
+                <li class="footer__list-item">კონტაქტი</li>
+                <li class="footer__list-item">ჩვენს შესახებ</li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- POPUPS -->
+    <div class="popup fl fl_center">
+        <div class="popup__form popup__form--login">
+            <div class="fl fl_center">
+                <h3 class="popup__form-heading">ავტორიზაცია</h3>
+                <div class="popup__form-close"></div>
+            </div>
+            <div class="popup__form-content">
+                <form class="form fl fl_dir_col" action="/" method="POST">
+                    <span class="form__input-heading">ელ-ფოსტის მისამართი</span></br>
+                    <input class="form__input" type="email" name="email">
+                    <span class="form__input-heading">პაროლი</span></br>
+                    <input class="form__input" type="password" name="password">
+                    <div class="fl fl_center">
+                        <button class="form__button">შესვლა</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script src="./assets/scripts/app.js"></script>
 </body>
 </html>
