@@ -15,8 +15,8 @@
         <div class="wrapper fl fl_jus_bet">
             <h1 class="header__logo fl fl_center">ონლაინ პროდუქტი</h1>
             <div class="fl">
-                <a class="header__button header__button--reg" href="#">რეგისტრაცია</a>
-                <a class="header__button header__button--auth" href="#">ავტორიზაცია</a>
+                <span class="header__button header__button--reg" onclick="Registration('open')">რეგისტრაცია</span>
+                <span class="header__button header__button--auth" onclick="Login('open')">ავტორიზაცია</span>
             </div>
         </div>
     </header>
@@ -32,11 +32,11 @@
     </footer>
 
     <!-- POPUPS -->
-    <div class="popup fl fl_center">
+    <!-- <div class="popup fl fl_center" id="loginPopup">
         <div class="popup__form popup__form--login">
             <div class="fl fl_center">
                 <h3 class="popup__form-heading">ავტორიზაცია</h3>
-                <div class="popup__form-close"></div>
+                <div class="popup__form-close" onclick="Login('close')"></div>
             </div>
             <div class="popup__form-content">
                 <form class="form fl fl_dir_col" action="/" method="POST">
@@ -44,6 +44,30 @@
                     <input class="form__input" type="email" name="email">
                     <span class="form__input-heading">პაროლი</span></br>
                     <input class="form__input" type="password" name="password">
+                    <div class="fl fl_center">
+                        <button class="form__button">შესვლა</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="popup fl fl_center" id="registrationPopup">
+        <div class="popup__form">
+            <div class="fl fl_center">
+                <h3 class="popup__form-heading">რეგისტრაცია</h3>
+                <div class="popup__form-close" onclick="Registration('close')"></div>
+            </div>
+            <div class="popup__form-switch">
+                <span class="popup__form-switch-tab">ფიზიკური პირი</span>
+                <span class="popup__form-switch-tab">იურიდიული პირი</span>
+            </div>
+            <div class="popup__form-content">
+                <form class="form fl fl_dir_col" action="/" method="POST">
+                    <span class="form__input-heading">სახელი</span></br>
+                    <input class="form__input" type="text" name="firstName">
+                    <span class="form__input-heading">გვარი</span></br>
+                    <input class="form__input" type="text" name="lastName">
                     <div class="fl fl_center">
                         <button class="form__button">შესვლა</button>
                     </div>

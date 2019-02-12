@@ -6,6 +6,7 @@
     border-top: 1px solid color(bg-grey, 0.2);
     background-color: #FCFCFC;
     &__copyright{
+        cursor: context-menu;
         color: color(text-grey, 1);
         font-size: 1.2rem;
         font-family: 'bpg_web';

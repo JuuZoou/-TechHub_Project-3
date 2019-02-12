@@ -4,11 +4,13 @@
     background-color: color(bg-white, 1);
     @include box-shadow(0, 12px, 44px, 0, rgba(170, 170, 170, 0.1));
     &__logo{
+        cursor: context-menu;
         color: color(text-blue, 0.9);
         font-size: 2.2rem;
         font-family: 'bpg_webcaps';
     }
     &__button{
+        cursor: pointer;
         font-size: 1.4rem;
         font-family: 'bpg_webcaps';
         line-height: 1.6rem;
