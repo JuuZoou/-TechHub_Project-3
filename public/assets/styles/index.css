@@ -229,7 +229,8 @@ input[type=number]::-webkit-outer-spin-button {
     -moz-border-radius: 50%; }
   .content__product--bottom {
     cursor: context-menu;
-    padding: 1em 1.2em; }
+    padding: 1.5em 1.3em;
+    height: 100%; }
   .content__product-title {
     color: rgba(66, 66, 68, 0.8);
     font-size: 1.4rem;
@@ -311,6 +312,29 @@ input[type=number]::-webkit-outer-spin-button {
 .form__line-inner {
   width: calc(50% - 1.5em);
   padding: 0 1em; }
+
+.form__list {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  padding: 1em 0.8em;
+  margin-bottom: 1em;
+  border: 1px solid rgba(0, 36, 100, 0.08);
+  background: url(http://i62.tinypic.com/15xvbd5.png) no-repeat 96% 0;
+  background-color: white;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px; }
+  .form__list-select {
+    font-size: 1.2em;
+    color: #424244;
+    font-family: 'bpg_webcaps';
+    width: 100%;
+    height: auto;
+    border: none;
+    background: transparent;
+    -webkit-user-select: none;
+    -webkit-appearance: button; }
 
 .form__button {
   cursor: pointer;
