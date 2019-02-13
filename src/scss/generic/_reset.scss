@@ -15,6 +15,9 @@ html {
     font-family: "bpg_web", Roboto, Helvetica, Arial, sans-serif,;
 }
 body {
+    position: relative;
+    padding-bottom: 70px;
+    min-height:100vh;
     background-color: #FFFFFF;
 }
 a {

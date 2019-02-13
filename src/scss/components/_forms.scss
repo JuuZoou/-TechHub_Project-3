@@ -1,4 +1,20 @@
 .form{
+    &--product{
+        width: 100%;
+        height: 100%;
+        & .form__input{
+            font-size: 1.4em;
+            margin-bottom: 1em;
+            padding: 0.6em 0.8em;
+        }
+        & .form__input-heading{
+            font-size: 1.2em;
+        }
+        & .form__button{
+            font-size: 1.4rem;
+            padding: 0.8em 2em;
+        }
+    }
     &__input{
         position: relative;
         color: color(text-grey, 1);
@@ -24,6 +40,12 @@
             font-size: 1.4rem;
             font-family: 'bpg_web';
             line-height: 1.6rem;
+        }
+    }
+    &__line{
+        &-inner{
+            width: calc(50% - 1.5em);
+            padding: 0 1em;
         }
     }
     &__button{

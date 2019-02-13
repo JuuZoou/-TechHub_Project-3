@@ -1,0 +1,26 @@
+.switch{
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid rgba(0, 36, 100, 0.08);
+    &__tab{
+        cursor: pointer;
+        position: relative;
+        color: color(text-grey, 0.8);
+        font-size: 1.4rem;
+        font-family: 'bpg_webcaps';
+        line-height: 2.1rem;
+        padding: 0 0.8em 0.5em 0.8em;
+        margin-right: 1em;
+        transition: 0.35s;
+        border-bottom: 2px solid transparent;
+        &:hover{
+            color: #62b5e5;
+            border-bottom: 2px solid #62b5e5;
+        }
+        &.active{
+            color: #62b5e5;
+            border-bottom: 2px solid #62b5e5;
+        }
+    }
+}
