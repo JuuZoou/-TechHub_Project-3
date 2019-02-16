@@ -364,6 +364,9 @@ input[type=number]::-webkit-outer-spin-button {
   opacity: 0;
   transition: all 0.2s ease-in-out;
   background-color: rgba(66, 66, 68, 0.4); }
+  .popup--message {
+    display: flex;
+    opacity: 1; }
   .popup__form {
     position: relative;
     width: 100%;
@@ -376,6 +379,9 @@ input[type=number]::-webkit-outer-spin-button {
     -moz-border-radius: 8px; }
     .popup__form--login {
       max-width: 40% !important; }
+    .popup__form--message {
+      max-width: 30%;
+      margin-top: -300px; }
     .popup__form-heading {
       color: #424244;
       font-size: 2.2rem;
@@ -396,6 +402,15 @@ input[type=number]::-webkit-outer-spin-button {
       margin-top: 3em; }
       .popup__form-content.active {
         display: block; }
+  .popup__message {
+    width: 100%;
+    margin-top: 2em; }
+    .popup__message-text {
+      color: #424244;
+      font-size: 1.6rem;
+      font-family: 'bpg_webcaps';
+      line-height: 1.9rem;
+      text-align: center; }
 
 .footer {
   position: absolute;

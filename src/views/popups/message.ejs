@@ -1,0 +1,38 @@
+<% if (locals.messageSuccess != false) { %>
+    <div class="popup popup--message fl fl_center" id="messagePopup">
+        <div class="popup__form popup__form--message">
+            <div class="fl fl_center">
+                <img src="../assets/images/success.png" alt="">
+                <div class="popup__form-close" onclick="Popup('close', 'message')"></div>
+            </div>
+            <div class="popup__message fl fl_center">
+                <p class="popup__message-text"><%= locals.messageSuccess -%></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let messagePopup = document.getElementById('messagePopup');
+        setTimeout( () => {
+            messagePopup.style.display = 'none';
+        }, 5000)
+    </script>
+<% } %>
+<% if (locals.errorMessage != false) { %>
+    <div class="popup popup--message fl fl_center" id="messagePopup">
+        <div class="popup__form popup__form--message">
+            <div class="fl fl_center">
+                <img src="../assets/images/error.png" alt="">
+                <div class="popup__form-close" onclick="Popup('close', 'message')"></div>
+            </div>
+            <div class="popup__message fl fl_center">
+                <p class="popup__message-text"><%= locals.errorMessage -%></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let messagePopup = document.getElementById('messagePopup');
+        setTimeout( () => {
+            messagePopup.style.display = 'none';
+        }, 5000)
+    </script>
+<% } %>

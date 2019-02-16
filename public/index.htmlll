@@ -102,7 +102,7 @@
                 <div class="popup__form-close" onclick="Popup('close', 'authorization')"></div>
             </div>
             <div class="popup__form-content active">
-                <form class="form fl fl_dir_col" action="/" method="POST">
+                <form class="form fl fl_dir_col" action="/login" method="POST">
                     <span class="form__input-heading">ელ-ფოსტის მისამართი</span></br>
                     <input class="form__input" type="email" name="email">
                     <span class="form__input-heading">პაროლი</span></br>
@@ -111,6 +111,17 @@
                         <button class="form__button">შესვლა</button>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+    <div class="popup popup--message fl fl_center" id="messagePopup">
+        <div class="popup__form popup__form--message">
+            <div class="fl fl_center">
+                <img src="./assets/images/success.png" alt="">
+                <div class="popup__form-close" onclick="Popup('close', 'message')"></div>
+            </div>
+            <div class="popup__message fl fl_center">
+                <p class="popup__message-text">თქვენ წარმატებით გაიარეთ რეგისტრაცია</p>
             </div>
         </div>
     </div>
@@ -126,7 +137,7 @@
             </div>
             <!-- Pesons Form -->
             <div class="popup__form-content active" id="switchPerson"> 
-                <form class="form fl fl_dir_col" action="/" method="POST">
+                <form class="form fl fl_dir_col" action="/register/user" method="POST">
                     <div class="form__line fl fl_jus_bet">
                         <div class="form__line-inner fl fl_dir_col">
                             <span class="form__input-heading">სახელი</span></br>
@@ -158,13 +169,13 @@
                         </div>
                     </div>
                     <div class="fl fl_center">
-                        <button class="form__button">შესვლა</button>
+                        <button class="form__button">რეგისტრაცია</button>
                     </div>
                 </form>
             </div>
             <!-- Company Form -->
             <div class="popup__form-content" id="switchCompany"> 
-                <form class="form fl fl_dir_col" action="/" method="POST">
+                <form class="form fl fl_dir_col" action="/register/company" method="POST">
                     <div class="form__line fl fl_jus_bet">
                         <div class="form__line-inner fl fl_dir_col">
                             <span class="form__input-heading">სახელი</span></br>
@@ -206,7 +217,7 @@
                         </div>
                     </div>
                     <div class="fl fl_center">
-                        <button class="form__button">შესვლა</button>
+                        <button class="form__button">რეგისტრაცია</button>
                     </div>
                 </form>
             </div>

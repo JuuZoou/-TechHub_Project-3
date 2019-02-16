@@ -1,0 +1,98 @@
+<div class="popup fl fl_center" id="registrationPopup">
+    <div class="popup__form">
+        <div class="fl fl_center">
+            <h3 class="popup__form-heading">რეგისტრაცია</h3>
+            <div class="popup__form-close" onclick="Popup('close', 'registration')"></div>
+        </div>
+        <div class="switch fl">
+            <span class="switch__tab popup__tab active" onclick="SwitchTabs('person')">ფიზიკური პირი</span>
+            <span class="switch__tab popup__tab" onclick="SwitchTabs('company')">იურიდიული პირი</span>
+        </div>
+        <!-- Pesons Form -->
+        <div class="popup__form-content active" id="switchPerson"> 
+            <form class="form fl fl_dir_col" action="/register/user" method="POST">
+                <div class="form__line fl fl_jus_bet">
+                    <div class="form__line-inner fl fl_dir_col">
+                        <span class="form__input-heading">სახელი</span></br>
+                        <input class="form__input" type="text" name="firstName" required>
+                    </div>
+                    <div class="form__line-inner fl fl_dir_col">
+                        <span class="form__input-heading">გვარი</span></br>
+                        <input class="form__input" type="text" name="lastName" required>
+                    </div>
+                </div>
+                <div class="form__line fl fl_jus_bet">
+                    <div class="form__line-inner fl fl_dir_col">
+                        <span class="form__input-heading">მობილურის ნომერი</span></br>
+                        <input class="form__input" type="number" name="mobileNumber" required>
+                    </div>
+                    <div class="form__line-inner fl fl_dir_col">
+                        <span class="form__input-heading">ელ-ფოსტა</span></br>
+                        <input class="form__input" type="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form__line fl fl_jus_bet">
+                    <div class="form__line-inner fl fl_dir_col">
+                        <span class="form__input-heading">პაროლი</span></br>
+                        <input class="form__input" type="password" name="password" required>
+                    </div>
+                    <div class="form__line-inner fl fl_dir_col">
+                        <span class="form__input-heading">გაიმეორეთ პაროლი</span></br>
+                        <input class="form__input" type="password" name="passwordAgain" required>
+                    </div>
+                </div>
+                <div class="fl fl_center">
+                    <button class="form__button">რეგისტრაცია</button>
+                </div>
+            </form>
+        </div>
+        <!-- Company Form -->
+        <div class="popup__form-content" id="switchCompany"> 
+            <form class="form fl fl_dir_col" action="/register/company" method="POST">
+                <div class="form__line fl fl_jus_bet">
+                    <div class="form__line-inner fl fl_dir_col">
+                        <span class="form__input-heading">სახელი</span></br>
+                        <input class="form__input" type="text" name="firstName" required>
+                    </div>
+                    <div class="form__line-inner fl fl_dir_col">
+                        <span class="form__input-heading">გვარი</span></br>
+                        <input class="form__input" type="text" name="lastName" required>
+                    </div>
+                </div>
+                <div class="form__line fl fl_jus_bet">
+                    <div class="form__line-inner fl fl_dir_col">
+                        <span class="form__input-heading">მობილურის ნომერი</span></br>
+                        <input class="form__input" type="number" name="mobileNumber" required>
+                    </div>
+                    <div class="form__line-inner fl fl_dir_col">
+                        <span class="form__input-heading">ელ-ფოსტა</span></br>
+                        <input class="form__input" type="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form__line fl fl_jus_bet">
+                    <div class="form__line-inner fl fl_dir_col">
+                        <span class="form__input-heading">კომპანიის დასახელება</span></br>
+                        <input class="form__input" type="text" name="companyName" required>
+                    </div>
+                    <div class="form__line-inner fl fl_dir_col">
+                        <span class="form__input-heading">საიდენტიფიკაციო კოდი</span></br>
+                        <input class="form__input" type="text" name="companyCode" required>
+                    </div>
+                </div>
+                <div class="form__line fl fl_jus_bet">
+                    <div class="form__line-inner fl fl_dir_col">
+                        <span class="form__input-heading">პაროლი</span></br>
+                        <input class="form__input" type="password" name="password" required>
+                    </div>
+                    <div class="form__line-inner fl fl_dir_col">
+                        <span class="form__input-heading">გაიმეორეთ პაროლი</span></br>
+                        <input class="form__input" type="password" name="passwordAgain" required>
+                    </div>
+                </div>
+                <div class="fl fl_center">
+                    <button class="form__button">რეგისტრაცია</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

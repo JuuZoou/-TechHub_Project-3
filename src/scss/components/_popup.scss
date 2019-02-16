@@ -1,4 +1,8 @@
 .popup{
+    &--message{
+        display: flex;
+        opacity: 1;
+    }
     display: none;
     position: absolute;
     top: 0;
@@ -11,6 +15,10 @@
     &__form{
         &--login{
             max-width: 40%!important;
+        }
+        &--message{
+            max-width: 30%;
+            margin-top: -300px;
         }
         position: relative;
         width: 100%;
@@ -42,6 +50,17 @@
             &.active{
                 display: block;
             }
+        }
+    }
+    &__message{
+        width: 100%;
+        margin-top: 2em;
+        &-text{
+            color: color(bg-grey, 1);
+            font-size: 1.6rem;
+            font-family: 'bpg_webcaps';
+            line-height: 1.9rem;
+            text-align: center;
         }
     }
 }

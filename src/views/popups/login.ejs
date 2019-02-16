@@ -1,0 +1,21 @@
+<div class="popup fl fl_center" id="loginPopup">
+    <div class="popup__form popup__form--login">
+        <div class="fl fl_center">
+            <h3 class="popup__form-heading">ავტორიზაცია</h3>
+            <div class="popup__form-close" onclick="Popup('close', 'authorization')"></div>
+        </div>
+        <div class="popup__form-content active">
+            <form class="form fl fl_dir_col" action="/login" method="POST">
+                <span class="form__input-heading">ელ-ფოსტის მისამართი</span></br>
+                <input class="form__input" type="email" name="email" required>
+                <span class="form__input-heading">პაროლი</span></br>
+                <input class="form__input" type="password" name="password" required>
+                <label class="form__input-heading"><input type="checkbox" name="saveUser"><span> </span>პაროლის დამახსოვრება</label>
+                <br><br>
+                <div class="fl fl_center">
+                    <button class="form__button">შესვლა</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

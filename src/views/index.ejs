@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ka-GE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="TechHub Project #3 - Using Node.JS">
+    <meta name="author" content="Mikheil Gigauri">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TechHub Project #3</title>
+    <link rel="stylesheet" href="../assets/styles/index.css">
+</head>
+<body>
+    <%- include('./components/header') -%>
+    <main class="content">
+        <div class="wrapper fl fl_jus_bet">
+            <section class="content__product fl fl_dir_col" id="productContainer">
+                <div class="switch fl">
+                    <span class="switch__tab content__tab active" onclick="SwitchTabs('contentNew')">ახალი დამატებული</span>
+                    <span class="switch__tab content__tab" onclick="SwitchTabs('contentPopular')">პოპულალური</span>
+                    <span class="switch__tab content__tab" onclick="SwitchTabs('contentSale')">ფასდაკლებული</span>
+                    <% if (locals.cookies == 'true') { %>
+                        <span class="content__product-add" onclick="ProductAdd('open')"></span>
+                        <span class="content__product-close" onclick="ProductAdd('close')"></span>
+                    <% } %>
+                </div>
+                <%- include('./products/newAdded') -%>
+                <%- include('./products/Popular') -%>
+                <%- include('./products/onSale') -%>
+            </section>
+            <%- include('./components/productAdd') -%>
+        </div>
+    </main>
+    <%- include('./components/footer') -%>
+    <%- include('./popups/login') -%>
+    <%- include('./popups/register') -%>
+    <%- include('./popups/message') -%>
+    <script src="../assets/scripts/app.js"></script>
+</body>
+</html>
