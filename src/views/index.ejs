@@ -18,16 +18,34 @@
                     <span class="switch__tab content__tab active" onclick="SwitchTabs('contentNew')">ახალი დამატებული</span>
                     <span class="switch__tab content__tab" onclick="SwitchTabs('contentPopular')">პოპულალური</span>
                     <span class="switch__tab content__tab" onclick="SwitchTabs('contentSale')">ფასდაკლებული</span>
-                    <% if (locals.cookies == 'true') { %>
+                    <% if (locals.isLoggedIn == 'true') { %>
                         <span class="content__product-add" onclick="ProductAdd('open')"></span>
                         <span class="content__product-close" onclick="ProductAdd('close')"></span>
                     <% } %>
                 </div>
-                <%- include('./products/newAdded') -%>
-                <%- include('./products/Popular') -%>
-                <%- include('./products/onSale') -%>
+                <div class="content__product-inner active fl fl_center fl_wrap" id="contentNew">
+                    <% locals.Product.forEach( (product) =>{ %>
+                        <% if ( product.productSection == 'newAdded' ) { %>
+                            <%- include('./products/productModel', {product: product}) -%>
+                        <% } %>
+                    <% }); %>
+                </div>
+                <div class="content__product-inner fl fl_center fl_wrap" id="contentPopular">
+                    <% locals.Product.forEach( (product) =>{ %>
+                        <% if ( product.productSection == 'Popular' ) { %>
+                            <%- include('./products/productModel', {product: product}) -%>
+                        <% } %>
+                    <% }); %>
+                </div>
+                <div class="content__product-inner fl fl_center fl_wrap" id="contentSale">
+                    <% locals.Product.forEach( (product) =>{ %>
+                        <% if ( product.productSection == 'onSale' ) { %>
+                            <%- include('./products/productModel', {product: product}) -%>
+                        <% } %>
+                    <% }); %>
+                </div>
             </section>
-            <%- include('./components/productAdd') -%>
+            <%- include('./products/productAdd') -%>
         </div>
     </main>
     <%- include('./components/footer') -%>

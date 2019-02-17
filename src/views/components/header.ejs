@@ -2,10 +2,10 @@
     <div class ="wrapper fl fl_jus_bet">
         <h1 class="header__logo fl fl_center">ონლაინ პროდუქტი</h1>
         <div class="fl">
-            <% if (locals.cookies == 'true') { %>
+            <% if (locals.isLoggedIn == 'true') { %>
                 <span class="header__button header__button--auth" onclick="logOut()">გასვლა</span>
             <% } %>
-            <% if (locals.cookies != 'true') { %>
+            <% if (locals.isLoggedIn != 'true') { %>
                 <span class="header__button header__button--reg" onclick="Popup('open', 'registration')">რეგისტრაცია</span>
                 <span class="header__button header__button--auth" onclick="Popup('open', 'authorization')">ავტორიზაცია</span>
             <% } %>

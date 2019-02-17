@@ -1,8 +1,8 @@
-<% if (locals.messageSuccess != false) { %>
+<% if (locals.messageSuccess != false ) { %>
     <div class="popup popup--message fl fl_center" id="messagePopup">
         <div class="popup__form popup__form--message">
             <div class="fl fl_center">
-                <img src="../assets/images/success.png" alt="">
+                <img src="../assets/images/success.png" alt="Successful MSG Image">
                 <div class="popup__form-close" onclick="Popup('close', 'message')"></div>
             </div>
             <div class="popup__message fl fl_center">
@@ -17,15 +17,15 @@
         }, 5000)
     </script>
 <% } %>
-<% if (locals.errorMessage != false) { %>
+<% if (locals.messageError != false) { %>
     <div class="popup popup--message fl fl_center" id="messagePopup">
         <div class="popup__form popup__form--message">
             <div class="fl fl_center">
-                <img src="../assets/images/error.png" alt="">
+                <img src="../assets/images/error.png" alt="Error MSG Image">
                 <div class="popup__form-close" onclick="Popup('close', 'message')"></div>
             </div>
             <div class="popup__message fl fl_center">
-                <p class="popup__message-text"><%= locals.errorMessage -%></p>
+                <p class="popup__message-text"><%= locals.messageError -%></p>
             </div>
         </div>
     </div>

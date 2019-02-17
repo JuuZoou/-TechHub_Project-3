@@ -1,0 +1,26 @@
+<aside class="content__sidebar fl fl_dir_col fl_ali_cen" id="productAdd">
+    <h2 class="content__sidebar-title">დაამატე პროდუქტი</h2>
+    <form class="form form--product fl fl_dir_col fl_jus_bet" action="/product/add" method="POST" enctype="multipart/form-data">
+        <div class="fl fl_dir_col">
+            <span class="form__input-heading">პროდუქტის დასახელება</span></br>
+            <input class="form__input" type="text" name="productName" required>
+            <span class="form__input-heading">ატვირთე სურათი</span></br>
+            <input class="form__input" type="file" name="productImage" required>
+            <span class="form__input-heading">პროდუქტის ფასი</span></br>
+            <input class="form__input" type="number" name="productPrice" required>
+            <span class="form__input-heading">გაყიდვების რაოდენობა</span></br>
+            <input class="form__input" type="number" name="productAmount" required>
+            <span class="form__input-heading">არიჩიეთ სექცია</span></br>
+            <div class="form__list">
+                <select class="form__list-select" name="productSection" required>
+                    <option value="newAdded">ახალი დამატებული</option>
+                    <option value="Popular">პოპულალური</option>
+                    <option value="onSale">ფასდაკლებული</option>
+                </select>
+            </div>
+        </div>
+        <div class="fl fl_center">
+            <button class="form__button">დამატება</button>
+        </div>
+    </form>
+</aside>

@@ -1,0 +1,22 @@
+<article class="content__product-item fl fl_dir_col fl_jus_bet">
+    <div class="content__product--top">
+        <span class=""></span>
+        <span class="content__product-percent fl fl_center">-50%</span>
+        <div class="content__product-image" style="background-image: url('../assets/images/uploads/<%= product.productImage %>')"></div>
+    </div>
+    <div class="content__product--bottom fl fl_dir_col fl_jus_bet">
+        <h3 class="content__product-title"><%= product.productName %></h3>
+        <div class="fl fl_jus_bet fl_wrap">
+            <span class="content__product-price">
+                ფასი: 
+                <!-- <span class="content__product-price--old"></span> / -->
+                <span class="content__product-price--new"><%= product.productPrice %></span>
+                <span style="font-family:bpg_gel">i</span>
+            </span>
+            <span class="content__product-sales">
+                გაყიდული:
+                <span><%= product.productAmount %></span>
+            </span>
+        </div>
+    </div>
+</article>

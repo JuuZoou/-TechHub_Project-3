@@ -20,7 +20,7 @@ const ProductSchema = new mongoose.Schema({
     productSection: {
         type: String,
         required: true,
-        enum: ["newAdded", "Popular", 'onSale']
+        enum: ['newAdded', 'Popular', 'onSale']
     },
     productOwner: {
         type: String,
@@ -28,4 +28,4 @@ const ProductSchema = new mongoose.Schema({
     }
 }, { timestamps: true });
 
-export const User = mongoose.model('product', ProductSchema);
+export const Product = mongoose.model('product', ProductSchema);

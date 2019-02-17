@@ -1,10 +1,16 @@
-import express from "express";
+import express from 'express';
 import { json, urlencoded } from 'express';
-import morgan from "morgan";
-import cookieParser from "cookie-parser";
+import morgan from 'morgan';
+import cookieParser from 'cookie-parser';
+
+import { fileFilter, storage, upload } from './src/resources/files/index';
+
 import config from './src/config/index';
 import { connect } from "./src/utils/db";
+
+import indexRouter from './src/resources/index/index.router';
 import userRouter from './src/resources/user/user.router';
+import productRouter from './src/resources/product/product.router';
 
 const app = express();
 
@@ -17,11 +23,17 @@ app.use( morgan('dev') );
 app.set("views", "./src/views");
 app.set("view engine", "ejs");
 
-app.use('/', userRouter);
+// Main Page
+app.use('/', indexRouter);
+app.use('/user/:id', indexRouter);
+
+// Users
+app.use('/login', userRouter);
 app.use('/register/user', userRouter);
 app.use('/register/company', userRouter);
-app.use('/login', userRouter);
-app.use('/user/:id', userRouter);
+
+// Products
+app.use('/product/add', upload.single('productImage'), productRouter);
 
 // IIFE
 (async () => {

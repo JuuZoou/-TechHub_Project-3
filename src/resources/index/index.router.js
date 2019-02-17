@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { authorization } from './user.controller';
+import { index } from './index.controller';
 
 const router = new Router();
 
-router.post('/', authorization);
+router.get('/', index);
 
 export default router;

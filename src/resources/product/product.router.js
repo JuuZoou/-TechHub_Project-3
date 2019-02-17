@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { authorization } from './user.controller';
+import { product } from './product.controller';
 
 const router = new Router();
 
-router.post('/', authorization);
+router.post('/', product); 
 
 export default router;
